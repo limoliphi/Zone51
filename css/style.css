@@ -1,8 +1,195 @@
-.image{
-    background-image: url("../image/alien-2-zone51.jpg");
+html {
+    background-color: #3d3d3d;
+
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 10% auto;
+    position: relative;
+}
+
+.m-head {
+    /*background-color: #39D;*/
+    background-image: -webkit-gradient(radial, 29% 11%, 0, 39% 44%, 120, color-stop( 0, rgba(255, 255, 255, .8) ), color-stop(.8, rgba(255, 255, 255, 0) ), color-stop(.8, transparent ), color-stop( 1, rgba(0, 0, 0, .33) )), url('n.png');
+    border-radius: 140px 140px 140px 140px / 150px 150px 200px 200px;
+    width: 180px;
+    height: 220px;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    z-index: 1;
+}
+
+
+.m-eye {
+    /*-webkit-mask-image: -webkit-gradient(radial, 50% 108%, 20, 50% 108%, 50, color-stop(0.5, rgba(0, 0, 0, 0)), color-stop(0.6, rgb(0, 0, 0)));*/
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    margin: 0px auto 5px auto;
+    top: 48%;
+    background-color: white;
+    -webkit-box-shadow: inset rgba(0,0,0,.4) 0 -1px 3px 1px, inset rgba(0,0,0,.5) 0 -5px 20px, rgba(0,0,0,.5) 0 -5px 10px, rgba(255,255,255,.5) 0 5px 10px;
     background-repeat: no-repeat;
-    width: 90vw;
-   height: 90vw;
+    background-image: -webkit-gradient(radial, 50% 48%, 0, 53% 50%, 56, color-stop(0.12, rgba(0, 0, 0, 1) ), color-stop(.22, #40AA64 ), color-stop(.4, #26594F ), color-stop(0.5, rgba(255, 255, 255, 0) ) );
+    -webkit-transition: background 1s linear;
+}
+
+.m-eye::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    border-radius: 5px;
+    width: 10px; height: 10px;
+    background-color: #fff;
+    -webkit-transform: skewX(-10deg);
+    opacity: .7;
+}
+
+.m-eye.n1{
+    left: 14px;
+    border-radius: 57px 80px / 25px 64px;
 
 
+
+}
+
+.m-eye.n2{
+    left: auto;
+    right: 14px;
+    border-radius: 80px 57px / 64px 25px;
+}
+
+.m-nose{
+    width: 30px;
+    height: 31px;
+    border-radius: 22px 22px 12px 12px / 38px 38px 10px 10px;
+    -webkit-box-shadow: rgba(0,0,0,0.05) 0 -8px 8px;
+    position: absolute;
+    top: 64%;
+    left: 42.5%;
+    background-image: -webkit-radial-gradient(50% 120%, ellipse farthest-corner, transparent, rgba(0,0,0,0) 0%, rgba(255,255,255,.1)56%,rgba(255, 255, 255, 0.1) 89%);
+
+
+}
+
+.m-nose::before, .m-nose::after{
+    content: '';
+    background-image: -webkit-radial-gradient(50% 65%, ellipse farthest-corner, #ababab, #000000 0%,#424242 56%,rgba(153, 153, 153, 0) 76%), url('n.png');
+    display: block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 2px 2px 1px 1px / 4px 4px 1px 1px;
+}
+.m-nose::before{
+    left: 6px;
+}
+.m-nose::after{
+    right: 6px;
+}
+
+.m-mouth {
+    position: absolute;
+    width: 36px;
+    height: 11px;
+    margin: 0 auto;
+    top: 86%;
+    overflow: hidden;
+    border-radius: 100px 100px 100px 100px / 30px 30px 80px 80px;
+    background-color: black;
+    left: 41%;
+    box-shadow: inset rgba(0,0,0,.7) 0 -2px 6px 1px, rgba(0,0,0,.7) 0 -2px 8px, rgba(255,255,255,.7) 0 4px 10px;
+    background-image: -webkit-radial-gradient(50% 100%, ellipse farthest-side, #660000, rgba(168, 0, 0, 0.9) 65%,#000000 56%,rgba(0, 0, 0, 0.8) 76%), url('n.png');
+    transition: all 1s linear;
+}
+
+.m-body {
+    /*background-color: #39D;*/
+    background-image: -webkit-gradient(radial, 37% 59%, .1, 48% 47%, 76, color-stop( 0, rgba(255, 255, 255, 0.6) ), color-stop(.8, rgba(255, 255, 255, 0) ), color-stop(.8, transparent ), color-stop( 1, rgba(0, 0, 0, .33) )), url('n.png');
+    border-radius: 150px 150px 140px 140px / 200px 201px 115px 115px;
+    width: 120px;
+    height: 152px;
+    position: absolute;
+    top: 64%;
+    left: 33%;
+}
+
+.m-body::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    /*background-color: #39D;*/
+    top: -5px;
+    left: 45%;
+    z-index: -1;
+}
+.m-body::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 44%;
+    border-radius: 5px;
+    width: 6px;
+    height: 6px;
+    background-color: #111;
+    -webkit-transform: skewX(-10deg);
+    opacity: .9;
+}
+.m-leg {
+    width: 20px;
+    border-radius: 10px;
+    height: 150px;
+    /*background-color: #39D;*/
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    z-index: -1;
+    background-image: -webkit-radial-gradient(36% 55%, ellipse cover, rgba(255,255,255,0.4),rgba(0,0,0,0.1) 64%), url('n.png');
+}
+.m-leg.n2{
+    left: 50%;
+}
+
+.m-hand {
+    width: 20px;
+    border-radius: 10px;
+    height: 115px;
+    /*background-color: #39D;*/
+    position: absolute;
+    top: 71%;
+    z-index: -1;
+    background-image: -webkit-radial-gradient(50% 86%, ellipse cover, rgba(255,255,255,0.4),rgba(0,0,0,0.1) 64%), url('n.png');
+
+}
+.m-hand.n1{
+    left: 29%;
+    -webkit-transform: rotate(29deg);
+}
+
+.m-hand.n2{
+    right: 33%;
+    -webkit-transform: rotate(-29deg);
+}
+/*Move It*/
+.container:hover .m-eye  {
+    /*background-image: -webkit-gradient(radial, 50% 58%, 0, 53% 50%, 56, color-stop(0.12, rgba(0, 0, 0, 1) ), color-stop(.22, #40AA64 ), color-stop(.4, #26594F ), color-stop(0.5, rgba(255, 255, 255, 0) ) );*/
+    background-position:  -15px;
+}
+
+
+
+
+.container:hover .m-head {
+
+}
+
+.container:hover .m-mouth{
+    -webkit-transform: scale(.9, 2);
 }
