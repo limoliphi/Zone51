@@ -17,7 +17,6 @@
     <div class="logo">
         <img src="image/logo.png" alt="Retour à l'accueil" class="Logo" />
     </div>
-
     </nav>
 
 </header>
@@ -26,14 +25,9 @@
     <h1 class="titleHeader">Welcome to 51 area</h1>
     <div class="mainImage3">
         <p>
-
-
             <img class="image" alt="" title="">
         </p>
-
-
     </div>
-
     <div class="paragraphe">
         
         <p>Tu as répondu oui : voilà un choix éclairé qui ne sera pas sans conséquence… puisque la vérité va t’être dévoilée. Elle a éclaté l’été dernier, en plein « Storm Area 51 », le rassemblement qui prévoyait d’envahir la zone 51. C’est à ce moment, en plein cœur du Nevada, aux États-Unis, que nous avons découvert ces mots. Ceux d’une langue inconnue sur Terre… Le message venu d’ailleurs a bien été décrypté mais sauras-tu, toi aussi, lire le message des étoiles ?</p>
@@ -48,7 +42,10 @@ require "src/functions.php";
 
 $words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION', 'MARS', 'SPACESHIP', 'GALAXY', 'SPACE', 'STELLAR', 'PARTY', 'ALIEN', 'TRAVEL'];
 
-
+if (empty($_GET)) {
+    header("Location: message.php");
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';

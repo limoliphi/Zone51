@@ -26,12 +26,8 @@
     <h1 class="titleHeader">Welcome to 51 area</h1>
     <div class="mainImage3">
         <p>
-
-
             <img class="image" alt="" title="">
         </p>
-
-
     </div>
 
     <div class="paragraphe">
@@ -47,7 +43,10 @@ require "src/functions.php";
 
 $words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION', 'MARS', 'SPACESHIP', 'GALAXY', 'SPACE', 'STELLAR', 'PARTY', 'ALIEN', 'TRAVEL'];
 
-
+if (empty($_GET)) {
+    header("Location: message.php");
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $cryptedMessage = $_GET['cryptedWord'] . ' ';
