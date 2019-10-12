@@ -16,6 +16,11 @@
 
     require "src/functions.php";
 
+    if (empty($_GET)) {
+        header("Location: message.php");
+        exit();
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
         $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
@@ -57,9 +62,9 @@
     <h1>Alors il dit quoi ce foutu message des étoiles ? </h1>
     <div class="trip">
         <p>As-tu découvert quel était le message de l'extra-terrestre ?</p>
-        <P><?= $cryptedMessage ?></P>
-        <p>Ta réponse est <?= $playerDecryption ?></p>
-        <p>Le  message disait  <?= $cryptedMessageDecrypted ?></p>
+        <P><?= htmlentities($cryptedMessage) ?></P>
+        <p>Ta réponse est <?= htmlentities($playerDecryption) ?></p>
+        <p>Le  message disait  <?= htmlentities($cryptedMessageDecrypted) ?></p>
         <?php
         if($count == 3) {
             ?><p>Félicitation tu as décodé le message de l'extraterrestre.</p>

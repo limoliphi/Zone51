@@ -17,7 +17,6 @@
     <div class="logo">
         <img src="image/logo.png" alt="Retour à l'accueil" class="Logo" />
     </div>
-
     </nav>
 
 </header>
@@ -26,12 +25,8 @@
     <h1 class="titleHeader">Welcome to 51 area</h1>
     <div class="mainImage3">
         <p>
-
-
             <img class="image" alt="" title="">
         </p>
-
-
     </div>
 
     <div class="paragraphe">
