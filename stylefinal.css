@@ -1,0 +1,143 @@
+body
+{
+    margin: 0;
+    width: 100%;
+    background-image:url(https://cdn-media.rtl.fr/cache/rPm9DziunD3A-H1Gjdrvuw/880v587-0/online/image/2019/0921/7798357008_deux-femmes-deguisees-en-alien-le-20-septembre-2019-a-rachel-dans-le-nevada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@-webkit-keyframes h
+{
+    0% {
+        -webkit-transform:rotate(-10deg);
+    }
+    33% {
+        -webkit-transform:rotate(10deg);
+    }
+    66% {
+        -webkit-transform:rotate(-10deg);
+    }
+    100% {
+        -webkit-transform:rotate(10deg);
+    }
+}
+
+@-webkit-keyframes e
+{
+    0% {
+        -webkit-transform: scaleY(0.05);
+    }
+    20% {
+        -webkit-transform: scaleY(0.8);
+    }
+    30% {
+        -webkit-transform: scaleY(0.05);
+    }
+    40% {
+        -webkit-transform: scaleY(0.8);
+    }
+    50% {
+        -webkit-transform: scaleY(0.05);
+    }
+    100% {
+        -webkit-transform: scaleY(0.05);
+    }
+}
+
+#dude
+{
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    -webkit-animation: h 4s ease-in-out infinite alternate;
+    -webkit-transform-origin: center center;
+}
+
+.face
+{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    top: -150px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 150px;
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,.2),
+    inset 0px -10px 100px rgba(0,0,0,.3);
+    border: 10px solid black;
+}
+
+.eye
+{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 100px;
+    position: absolute;
+    top: 110px;
+    left: 110px;
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,.2),
+    inset 0px -10px 30px rgba(0,0,0,.3);
+    border: 10px solid black;
+    overflow: hidden;
+}
+
+.eyelid
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: black;
+    -webkit-animation: e 2s ease-in-out infinite;
+    -webkit-transform-origin: center center;
+}
+
+.eye:first-of-type
+{
+    left: -30px;
+}
+
+.mouth
+{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    top: 250px;
+    border-radius: 20px;
+    -webkit-animation: e 4s ease-in-out infinite;
+    -webkit-transform-origin: center center;
+}
+
+p, h1 {
+    font-family: OCR A Std, monospace;
+    color: white;
+}
+
+.trip {
+
+    width: 10%;
+    margin-left: 2%;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+h1 {
+    width: 60%;
+    margin-left: auto;
+    font-weight: bolder;
+    margin-top: 1%;
+
+}
+
+.buttonTwo {
+    width: 10%;
+    margin-left: 2%;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
