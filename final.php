@@ -19,7 +19,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
         $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
-        $key = $_GET['cryptedKey'];
+        $key = (int)$_GET['cryptedKey'];
         if (trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
             $count = (int)$_GET['count'] + 1;
         }else {
@@ -30,7 +30,7 @@
     $cryptedMessage = trim($cryptedMessage);
     $cryptedMessageArray = explode('   ', $cryptedMessage);
     foreach ($cryptedMessageArray as $cryptedMessageWord) {
-        $cryptedMessageDecrypted .= decrypting($cryptedMessageWord, $key);
+        $cryptedMessageDecrypted .= decrypting($cryptedMessageWord, $key). ' ';
 
     }
 
@@ -59,6 +59,7 @@
         <p>As-tu découvert quel était le message de l'extra-terrestre ?</p>
         <P><?= $cryptedMessage ?></P>
         <p>Ta réponse est <?= $playerDecryption ?></p>
+        <p>Le  message disait  <?= $cryptedMessageDecrypted ?></p>
         <?php
         if($count == 3) {
             ?><p>Félicitation tu as décodé le message de l'extraterrestre.</p>
