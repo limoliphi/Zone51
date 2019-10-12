@@ -48,7 +48,7 @@
             D’où vient-tu, toi qui veux percer le mystère universel... ?
         </p>
     </div>
-<h1>Sauriez-vous décrypter ce message</h1>
+<h2>Sauriez-vous décrypter ce message</h2>
 
 <?php
 
