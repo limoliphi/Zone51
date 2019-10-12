@@ -1,27 +1,3 @@
-<?php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-
-    $data = array_map('trim', $_POST);
-
-    $errors = [];
-    if (empty($data['answer'])) {
-        $errors['answer'][] = 'Le champ ne doit pas etre vide';
-    }
-    if($data['answer'] > 255) {
-        $errors['answer'][] = 'Le champ ne doit pas depasser 255 caractères';
-    }
-    if (empty($errors)) {
-        header('Location: index.php?success=ok');
-        exit();
-    }
-
-}
-
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,22 +9,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="stylefinal.css">
     <title>Document</title>
 </head>
-<body>
-<html lang="en-US"><head>
-    <meta charset="UTF-8">
-    <title>MNSTR</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+
 
 <body>
+    <?php
 
-<h1>Alors c'est quoi ce foutu message des étoiles ? </h1>
+    require "src/functions.php";
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
+        $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
+        var_dump($playerDecryption);
+        if (trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
+            $count = (int)$_GET['count'] + 1;
+        }else {
+            $count = (int)$_GET['count'];
+        }
+        var_dump($count);
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+
+        $data = array_map('trim', $_POST);
+
+        $errors = [];
+        if (empty($data['answer'])) {
+            $errors['answer'][] = 'Le champ ne doit pas etre vide';
+        }
+        if($data['answer'] > 255) {
+            $errors['answer'][] = 'Le champ ne doit pas depasser 255 caractères';
+        }
+        if (empty($errors)) {
+            header('Location: index.php?success=ok');
+            exit();
+        }
+    }
+
+    ?>
+
+    <h1>Alors c'est quoi ce foutu message des étoiles ? </h1>
     <div class="trip">
         <p>As-tu découvert quel était le message de l'extra-terrestre ?</p>
+        <P><?= $cryptedMessage ?></P>
         <form action="" method="post">
             <div>
                 <label for="answer"></label>
-                <input type="text" id="answer" name="answer" required value="<?php if(isset($_POST['answer'])) echo $_POST['answer']; ?>" />
+                <input type="text" id="answer" name="answer" required value="<?php if(isset($_GET)) echo $_GET['playerDecryption']; ?>" />
                 <p><?php if(isset($errors['answer1'])) echo $errors['answer1']; ?></p>
             </div>
             <div class="button">

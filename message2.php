@@ -17,16 +17,21 @@
 require "src/functions.php";
 
 $words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION'];
-$key = rand(1, 26);
+$key = rand(1, 25);
 $word = $words[rand(0,count($words)-1)];
 $cryptedWord = crypting($word, $key);
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $cryptedMessage = $_GET['cryptedWord'] . ' ';
+    $playerDecryption = $_GET['decryption'] . ' ';
     if(trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
+        $count = (int)$_GET['count']+1;
         ?>
         <p>Tu es sur la bonne voie</p>
         <?php
     }else {
+        $count = (int)$_GET['count'];
         ?>
         <p>Tu es encore loin</p>
     <?php } ?>
@@ -39,6 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <input type="text" id="decryption" name="decryption" REQUIRED>
         <input name="cryptedWord" type="hidden" value="<?= $cryptedWord ?> "/>
         <input name="cryptedKey" type="hidden" value="<?= $key ?> "/>
+        <input name="cryptedMessage" type="hidden" value="<?= $cryptedMessage ?> "/>
+        <input name="playerDecryption" type="hidden" value="<?= $playerDecryption ?> "/>
+        <input name="count" type="hidden" value="<?= $count ?> "/>
         <button>Valider</button>
     </form>
 

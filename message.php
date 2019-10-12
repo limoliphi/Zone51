@@ -17,9 +17,10 @@
 require "src/functions.php";
 
 $words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION'];
-$key = rand(1, 26);
+$key = rand(1, 25);
 $word = $words[rand(0,count($words)-1)];
 $cryptedWord = crypting($word, $key);
+$count = 0;
 
 ?>
 
@@ -31,6 +32,8 @@ $cryptedWord = crypting($word, $key);
     <input type="text" id="decryption" name="decryption" REQUIRED>
     <input name="cryptedWord" type="hidden" value="<?= $cryptedWord ?> "/>
     <input name="cryptedKey" type="hidden" value="<?= $key ?> "/>
+    <input name="count" type="hidden" value="<?= $count ?> "/>
+
     <button>Valider</button>
 
 </form>
