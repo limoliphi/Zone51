@@ -35,20 +35,12 @@
     </div>
 
     <div class="paragraphe">
-        <p>
-            1 - D’où partons-nous ?
 
+        <p>Tu as répondu oui : voilà un choix éclairé qui ne sera pas sans conséquence… puisque la vérité va t’être dévoilée. Elle a éclaté l’été dernier, en plein « Storm Area 51 », le rassemblement qui prévoyait d’envahir la zone 51. C’est à ce moment, en plein cœur du Nevada, aux États-Unis, que nous avons découvert ces mots. Ceux d’une langue inconnue sur Terre… Le message venu d’ailleurs a bien été décrypté mais sauras-tu, toi aussi, lire le message des étoiles ?</p>
+        <p>Pour t’aider, nous te proposons un petit coup de main avec un indice... </p>
 
-            Tu viens de connecter sur (titre du site). Tu as raison. Tu n’y es pas arrivé par hasard. Tu t’interroges. Et ta soif de question t’as conduit jusqu’ici parce que tu cherches des réponses : qui sommes-nous? Où allons-nous, que faisons-nous… ? La vérité est-elle ailleurs ?
-
-            Oui, elle l’est. Mais peut-être pas si éloignée.,Parce qu’en répondant aux questions qui vont suivre, tu vas comprendre que nous ne sommes pas seuls dans l’univers. Tu en veux la preuve ?
-
-            Une première question avant de poursuivre :
-
-            D’où vient-tu, toi qui veux percer le mystère universel... ?
-        </p>
     </div>
-    <h2>Sauriez-vous décrypter ce message</h2>
+    <h2>Sauriez-vous décrypter cette première partie du message</h2>
 
 <?php
 

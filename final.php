@@ -54,9 +54,9 @@
 
     ?>
 
-    <h1>Alors il dit quoi ce foutu message des étoiles ? </h1>
+    <h1>Il dit quoi ce foutu message des étoiles ? </h1>
     <div class="trip">
-        <p>As-tu découvert quel était le message de l'extra-terrestre ?</p>
+        <p>Alors as-tu réussi à décrypter le langage extra-terrestre ?</p>
         <P><?= $cryptedMessage ?></P>
         <p>Ta réponse est <?= $playerDecryption ?></p>
         <p>Le  message disait  <?= $cryptedMessageDecrypted ?></p>
