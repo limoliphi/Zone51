@@ -1,8 +1,87 @@
-.image{
-    background-image: url("../image/alien-2-zone51.jpg");
-    background-repeat: no-repeat;
-    width: 90vw;
-   height: 90vw;
 
+*{
+  font-family: 'Mansalva', cursive;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-image: url('../image/voie-lactee.jpg');
+  width: 100vw;
+  height: 20vw;
+  text-align: center;
+}
+
+.Logo {
+  flex-direction: ;
+  background-image: url("../image/logo.jpg");
+  border-radius: 50%;
+  height: 15vw;
+  margin: auto;
+  margin: 2vw;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-left: 0;
 
 }
+
+.list-menu-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.listmenu {
+  display: flex;
+  flex-direction: row;
+}
+
+li, a link {
+  width: 200px;
+  color: white;
+  color: #111111;
+  text-align: center;
+  }
+
+h1 {
+
+}
+
+.titleHeader{
+  color: #111111;
+  text-align: center;
+ }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+
+}
+
+  .mainImage{
+    background-image: url("../image/alien-2-zone51.jpg");
+    background-repeat: no-repeat;
+    position: bottom;
+    border-radius: 50%;
+    width: 80vw;
+    margin-top: 15vw;
+    padding-top: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 80vw;
+  }
+
+  .paragraphe{
+
+  }
+
+  .ovni{
+    background-image: url("../image/ovni.jpg");
+    width: 10vw;
+    height; 200px;
+  }
