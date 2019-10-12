@@ -56,12 +56,12 @@ if (empty($_GET)) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
-    $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
+    $cryptedMessage = $_GET['cryptedWord'] . ' ';
+    $playerDecryption = $_GET['decryption'] . ' ';
     $key = (int)$_GET['cryptedKey'];
     $word = $words[rand(0,count($words)-1)];
     $cryptedWord = crypting($word, $key);
-    if(trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
+    if (strtoupper(trim($_GET['decryption'])) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
         $count = (int)$_GET['count']+1;
         ?>
         <p>Tu es très proche</p>

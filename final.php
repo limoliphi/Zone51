@@ -22,10 +22,10 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
-        $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
+        $cryptedMessage = $_GET['cryptedWord'] . ' ';
+        $playerDecryption = $_GET['decryption'] . ' ';
         $key = (int)$_GET['cryptedKey'];
-        if (trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
+        if (strtoupper(trim($_GET['decryption'])) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
             $count = (int)$_GET['count'] + 1;
         }else {
             $count = (int)$_GET['count'];
@@ -62,9 +62,9 @@
     <h1>Alors il dit quoi ce foutu message des étoiles ? </h1>
     <div class="trip">
         <p>As-tu découvert quel était le message de l'extra-terrestre ?</p>
-        <P><?= htmlentities($cryptedMessage) ?></P>
-        <p>Ta réponse est <?= htmlentities($playerDecryption) ?></p>
-        <p>Le  message disait  <?= htmlentities($cryptedMessageDecrypted) ?></p>
+        <P><?= $cryptedMessage ?></P>
+        <p>Ta réponse est <?= $playerDecryption ?></p>
+        <p>Le  message disait  <?= $cryptedMessageDecrypted ?></p>
         <?php
         if($count == 3) {
             ?><p>Félicitation tu as décodé le message de l'extraterrestre.</p>
@@ -102,8 +102,6 @@
             <div class="mouth"></div>
         </div>
     </div>
-
-
 
 </body>
 </html>

@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $key = (int)$_GET['cryptedKey'];
     $word = $words[rand(0,count($words)-1)];
     $cryptedWord = crypting($word, $key);
-    if(trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
+    if (strtoupper(trim($_GET['decryption'])) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
         $count = (int)$_GET['count']+1;
         ?>
         <p>Tu es sur la bonne voie</p>
