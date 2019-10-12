@@ -19,19 +19,20 @@
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
         $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
+        $key = $_GET['cryptedKey'];
         if (trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
             $count = (int)$_GET['count'] + 1;
         }else {
             $count = (int)$_GET['count'];
         }
     }
-//    $cryptedMessageDecrypted = '';
-//    $cryptedMessage = trim($cryptedMessage);
-//    $cryptedMessageArray = explode('   ', $cryptedMessage);
-//    foreach ($cryptedMessageArray as $cryptedMessageWord) {
-//        $cryptedMessageDecrypted .= decrypting($cryptedMessageWord, $key);
-//
-//    }
+    $cryptedMessageDecrypted = '';
+    $cryptedMessage = trim($cryptedMessage);
+    $cryptedMessageArray = explode('   ', $cryptedMessage);
+    foreach ($cryptedMessageArray as $cryptedMessageWord) {
+        $cryptedMessageDecrypted .= decrypting($cryptedMessageWord, $key);
+
+    }
 
 //    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //

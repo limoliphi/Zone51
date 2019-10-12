@@ -13,8 +13,7 @@
 }
 
 .Logo {
-  flex-direction: ;
-  background-image: url("../image/logo.jpg");
+  background-image: url("../image/logo.png");
   border-radius: 50%;
   height: 15vw;
   margin: auto;
@@ -82,5 +81,5 @@ h1 {
   .ovni{
     background-image: url("../image/ovni.jpg");
     width: 10vw;
-    height; 200px;
+    height: 200px;
   }

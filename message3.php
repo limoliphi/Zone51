@@ -17,14 +17,15 @@
 require "src/functions.php";
 
 $words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION', 'MARS', 'SPACESHIP', 'GALAXY', 'SPACE', 'STELLAR', 'PARTY', 'ALIEN', 'TRAVEL'];
-$key = rand(1, 25);
-$word = $words[rand(0,count($words)-1)];
-$cryptedWord = crypting($word, $key);
+
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $cryptedMessage = $_GET['cryptedMessage'] . $_GET['cryptedWord'] . ' ';
     $playerDecryption = $_GET['playerDecryption'] . $_GET['decryption'] . ' ';
+    $key = $_GET['cryptedKey'];
+    $word = $words[rand(0,count($words)-1)];
+    $cryptedWord = crypting($word, $key);
     if(trim($_GET['decryption']) === decrypting(trim($_GET['cryptedWord']), (int)$_GET['cryptedKey'])) {
         $count = (int)$_GET['count']+1;
         ?>
