@@ -16,7 +16,7 @@
 
 require "src/functions.php";
 
-$words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION'];
+$words = ['HELLO', 'HUMAN', 'WELCOME', 'CONGRATULATION', 'MARS', 'SPACESHIP', 'GALAXY', 'SPACE', 'STELLAR', 'PARTY', 'ALIEN', 'TRAVEL'];
 $key = rand(1, 25);
 $word = $words[rand(0,count($words)-1)];
 $cryptedWord = crypting($word, $key);
