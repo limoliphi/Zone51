@@ -1,0 +1,39 @@
+body
+{
+    margin: 0;
+    width: 100%;
+    background-image:url(https://cdn.pixabay.com/photo/2018/02/21/11/52/desktop-3170198_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-family: OCR A Std, monospace;
+    color: white;
+    width: 10%;
+    margin-left: 4%;
+    font-weight: bolder;
+    font-size: 1.5em;
+
+
+}
+
+h1 {
+    font-family: OCR A Std, monospace;
+    color: white;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+.champ {
+
+    width:10%;
+    height: 100%;
+    margin-left: 4%;
+}
+
+.repo {
+    width:10%;
+    height: 100%;
+    margin-left: 4%;
+}

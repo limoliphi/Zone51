@@ -18,18 +18,16 @@
         <div class="logo">
              <img src="image/logo.png" alt="Retour à l'accueil" class="Logo" />
         </div>
-        <
 
+        <div class="listmenu">
+        </div>
     </nav>
-
 </header>
 
 <main class="main">
     <h1 class="titleHeader">Welcome to 51 area</h1>
     <div class="mainImage">
         <p>
-
-
             <img class="image" alt="" title="">
         </p>
 
@@ -37,20 +35,16 @@
     </div>
 
     <div class="paragraphe">
-        <p>
-            1 - D’où partons-nous ?
+        <p>Tu viens de te connecter sur Zone51. Tu as raison.</p>
+        <p>Tu n’y es pas arrivé par hasard. Tu t’interroges et ta soif de réponses t’a conduit jusqu’ici </p>
+        <p>Sommes-nous seuls dans le vaste univers ? En répondant aux questions qui vont suivre, tu seras fixé une bonne foi pour toute...</p>
 
-
-            Tu viens de connecter sur (titre du site). Tu as raison. Tu n’y es pas arrivé par hasard. Tu t’interroges. Et ta soif de question t’as conduit jusqu’ici parce que tu cherches des réponses : qui sommes-nous? Où allons-nous, que faisons-nous… ? La vérité est-elle ailleurs ?
-
-            Oui, elle l’est. Mais peut-être pas si éloignée.,Parce qu’en répondant aux questions qui vont suivre, tu vas comprendre que nous ne sommes pas seuls dans l’univers. Tu en veux la preuve ?
-
-            Une première question avant de poursuivre :
-
-            D’où vient-tu, toi qui veux percer le mystère universel... ?
-        </p>
     </div>
-            <button >suivant</button>
+
+            <button><a href="end.php">Je veux poursuivre... </a> </button>
+
+
+
 
 
 </main>
