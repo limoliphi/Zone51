@@ -18,6 +18,7 @@
         <div class="logo">
              <img src="image/logo.png" alt="Retour à l'accueil" class="Logo" />
         </div>
+
         <div class="listmenu">
         </div>
     </nav>
@@ -30,6 +31,7 @@
             <img class="image" alt="" title="">
         </p>
 
+
     </div>
 
     <div class="paragraphe">
@@ -38,7 +40,12 @@
         <p>Sommes-nous seuls dans le vaste univers ? En répondant aux questions qui vont suivre, tu seras fixé une bonne foi pour toute...</p>
 
     </div>
+
             <button><a href="end.php">Je veux poursuivre... </a> </button>
+
+
+
+
 
 </main>
 
