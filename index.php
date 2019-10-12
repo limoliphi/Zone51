@@ -18,13 +18,7 @@
         <div class="logo">
              <img src="image/logo.png" alt="Retour à l'accueil" class="Logo" />
         </div>
-        <div class="listmenu">
-            <ul class="list-menu-header">
-                <li><a href="#" ">lien1</a></li>
-                <li><a href="#" ">lien2</a></li>
-                <li><a href="#" ">lien3</a></li>
-            </ul>
-        </div>div
+        <
 
     </nav>
 
@@ -34,8 +28,11 @@
     <h1 class="titleHeader">Welcome to 51 area</h1>
     <div class="mainImage">
         <p>
+
+
             <img class="image" alt="" title="">
         </p>
+
 
     </div>
 
@@ -53,9 +50,7 @@
             D’où vient-tu, toi qui veux percer le mystère universel... ?
         </p>
     </div>
-            <button>suivant</button>
-</div>
-
+            <button >suivant</button>
 
 
 </main>
