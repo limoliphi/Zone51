@@ -51,8 +51,6 @@
         </p>
     </div>
             <button >suivant</button>
-</div>
-
 
 
 </main>
